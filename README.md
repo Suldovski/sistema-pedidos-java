@@ -1,46 +1,70 @@
-# Sistema de Pedidos - Projeto Java
+# Sistema de Pedidos em Java
 
-## Informações Gerais
-Este projeto simula um sistema de pedidos em Java, com foco em conceitos de Programação Orientada a Objetos. Os principais objetivos são:
-- Gerenciar produtos, clientes, vendedores e pedidos.
-- Calcular valores totais de pedidos.
-- Emitir relatórios de pedidos realizados.
+##  Informações Gerais
 
-## Funcionalidades
-- Cadastro de clientes, vendedores e produtos.
-- Criação e registro de pedidos com múltiplos itens.
-- Cálculo automático do valor total dos pedidos.
-- Geração de relatórios através de uma interface genérica (`Imprimivel`).
+Este projeto consiste em um sistema simples de pedidos desenvolvido em Java, utilizando os princípios da Programação Orientada a Objetos (POO). Ele permite o cadastro de clientes, vendedores, produtos, e a criação de pedidos contendo múltiplos itens.
 
-## Estrutura de Classes e Relações
+##  Objetivos e Funcionalidades
 
-### Herança
-- `Pessoa`: Superclasse de `Cliente` e `Vendedor`.
+- Cadastro de clientes e vendedores
+- Cadastro de produtos com preço
+- Criação de pedidos com múltiplos itens
+- Relatório de pedidos (implementação de interfaces)
+- Cálculo de valores totais de pedidos
+- Uso de herança, agregação, composição e interfaces
 
-### Interfaces
-- `Calculavel`: Implementada por `Pedido`, define o método `calcularTotal()`.
-- `Imprimivel`: Implementada por `Pedido` e `Relatorio`, define o método `imprimir()`.
+##  Estrutura de Classes
 
-### Composição
-- `Pedido` possui um `Cliente`, um `Vendedor`, e uma lista de `ItemPedido`.
-- `ItemPedido` possui um `Produto` e uma quantidade.
+### 🔹 Pessoa (Classe Abstrata)
+Superclasse base para Cliente e Vendedor. Contém atributos comuns como `nome` e `cpf`.
 
-### Agregação
-- `Relatorio` recebe uma lista de objetos `Imprimivel`.
+### 🔹 Cliente
+Herdeira de `Pessoa`, representa um cliente do sistema.
 
-## Como Executar o Projeto
+### 🔹 Vendedor
+Herdeira de `Pessoa`, representa o vendedor responsável pelo pedido.
 
-1. Abra seu IDE (como IntelliJ ou Eclipse).
-2. Importe todos os arquivos `.java` do projeto.
-3. Execute a classe `Principal.java`, que contém o `main`.
-4. Siga as instruções no console para simular o uso do sistema.
+### 🔹 Produto
+Contém nome e preço do produto.
+
+### 🔹 ItemPedido
+Associa um produto a uma quantidade. Relacionamento de composição com `Pedido`.
+
+### 🔹 Pedido
+Agrega Cliente, Vendedor e uma lista de `ItemPedido`. Calcula o total.
+
+### 🔹 Interfaces
+- `Calculavel`: Interface para objetos que podem ser calculados (valor total do pedido).
+- `Imprimivel`: Interface usada para gerar relatórios.
+
+### 🔹 Relatorio
+Implementa `Imprimivel` para exibir pedidos.
+
+### 🔹 Principal
+Classe com o `main`, responsável pela interação com o usuário via terminal.
+
+##  Como Executar o Projeto
+
+1. Instale o Java (versão 11 ou superior)
+2. Compile todos os arquivos `.java` com:
+   ```bash
+   javac *.java
+   ```
+3. Execute com:
+   ```bash
+   java Principal
+   ```
 
 ## Uso do ChatGPT
-O ChatGPT foi utilizado no projeto para:
-- Esclarecimento e explicações de conceitos de POO.
-- Correções e ajustes finais de código.
-- Auxilio para configurar repositorio no git.
 
-## Referências e Recursos
-- Apoio do ChatGPT (OpenAI) na revisão de código, auxilio em pequenos ajustes finais e auxilio para configurar
-o repositorio no git.
+A ferramenta ChatGPT foi utilizada no desenvolvimento deste projeto para:
+- Corrigir e melhorar a estrutura dos arquivos `.java`
+- Auxilio na documentação deste `README.md`
+- Orientar na criação e configuração do repositório GitHub
+
+##  Referências
+
+- Git e GitHub para iniciantes (projeto e versionamento)
+
+---
+
