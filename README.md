@@ -67,4 +67,7 @@ A ferramenta ChatGPT foi utilizada no desenvolvimento deste projeto para:
 - Git e GitHub para iniciantes (projeto e versionamento)
 
 ---
+## Equipe 
 
+- Luan Gabriel Iliano Suldovski
+- Vinicius Vilkevicius de Souza
