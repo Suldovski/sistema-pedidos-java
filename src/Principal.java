@@ -107,6 +107,6 @@ public class Principal {
                 System.out.println("Entrada inválida! Tente novamente.");
                 sc.nextLine();
             }
-        } while (opcao != 0);
+        } while (opcao != 6);
     }
 }
